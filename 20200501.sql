@@ -256,3 +256,10 @@ AND c.pid = p.pid
 AND c.pid IN(SELECT pid
             FROM cycle
             WHERE cid = 2);
+            
+            
+SELECT*
+FROM emp
+WHERE ( mgr, deptno ) IN (SELECT mgr, deptno 
+                        FROM emp
+                        WHERE empno IN (7499, 7782 ));
